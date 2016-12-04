@@ -435,7 +435,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         protected void onPostExecute(final Boolean success) {
             mAuthTask = null;
             showProgress(false);
-
+/*
             if (usernameString.equals(tempUser) && passwordString.equals(tempPassword)) {
                 startActivity(new Intent(getBaseContext(), MessageList.class));
                 finish();
@@ -443,7 +443,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
             }
-/*            else if (isRegistered.equals("true")) {
+*/          if (isRegistered.equals("true")) {
                 startActivity(new Intent(getBaseContext(), MessageList.class));
                 finish();
             } else if(isRegistered.equals("false")){
@@ -459,7 +459,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 System.out.println("Response: "+isRegistered);
 
             }
- */       }
+        }
 
         @Override
         protected void onCancelled() {
